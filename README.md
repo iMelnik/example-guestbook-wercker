@@ -43,6 +43,8 @@ $ deis create guestbook --no-remote
 
 **Note**: We are creating the App with `--no-remote`, as later one we are going to use docker image built by Wercker
 
+Remember this name, it should be same as in wercker.yml
+
 2) Set `env vars` so the App knows where to connect to redis cluster:
 ```
 $ deis config:set GET_HOSTS_FROM=env REDIS_MASTER_SERVICE_HOST=redis-master.default REDIS_SLAVE_SERVICE_HOST=redis-slave.default -a guestbook
